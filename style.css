@@ -1,0 +1,158 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #3f3f3f;
+  
+}
+
+.calculator {
+  
+  width: 300px;
+  border-radius: 5px;
+  position: relative;
+}
+
+/* Display */
+.calculator-display {
+  background: #242424;
+  color: #5f6972;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 10px 10px 0 0;
+  max-width: 100%;
+}
+
+.calculator-display h1 {
+  margin: 0;
+  padding: 25px;
+  font-size: 55px;
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  overflow-x: auto;
+  color: white;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #bf6ffc;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9f2df8;
+}
+
+/* Buttons */
+.calculator-buttons {
+  display: grid;
+  grid-gap: 12px;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 10px;
+  background-color: #242424;
+  border-radius: 0px 0px 5px 5px;
+}
+
+button {
+  min-height: 50px;
+  font-size: 20px;
+  font-weight: 100;
+  border: none;
+  background: black;
+  color: white;
+  border-radius: 1.2rem;
+  cursor: pointer;
+  border: solid white 0.5px;
+}
+
+button:hover {
+  background-color: orange;
+  color:white;
+  filter: brightness(110%);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button:focus {
+  outline: none;
+}
+
+.operator {
+  background: black;
+  color: white;
+  font-size: 30px;
+  border: solid #e6ddec 1px;
+}
+
+.operator:hover {
+  background: orange;
+  color: white;
+  border: none;
+}
+
+.clear {
+  background:orange;
+  color: white;
+}
+
+.clear:hover {
+  background-color: black;
+  filter: brightness(110%);
+  color: white;
+}
+
+.equal-sign {
+  grid-column: -2;
+  grid-row: 2 / span 4;
+  background: orange;
+  color: white;
+  border: solid #e6ddec 1px;
+}
+
+.equal-sign:hover {
+  background-color: black;
+  color:white;
+  filter: brightness(96%);
+}
+
+footer {
+  position: absolute;
+  bottom: 5%;
+  color: #64879e;
+  font-size: 15px;
+}
+
+a:link {
+  color: #9f2df8;
+}
+a:visited {
+  color: #a126ff;
+}
+
+/* Media Query: Large Smartphone (Vertical) */
+@media screen and (max-width: 600px) {
+  .calculator {
+    width: 95%;
+  }
+  footer {
+    bottom: 10%;
+    font-size: 18px;
+  }
+}
